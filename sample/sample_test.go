@@ -5,10 +5,15 @@ import (
 
 	redistest "github.com/soh335/go-test-redisserver"
 	redis "gopkg.in/redis.v2"
+	"github.com/kyokomi/redis-test-example/foo"
+	"fmt"
 )
 
 func TestSampleService(t *testing.T) {
 
+	f := foo.NewFoo()
+	fmt.Println(f.Name)
+	
 	server, err := redistest.NewServer(true, nil)
 	if err != nil {
 		t.Error(err)
