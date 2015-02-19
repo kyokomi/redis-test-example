@@ -1,15 +1,19 @@
 package sample
 
 import (
-	redis "gopkg.in/redis.v2"
 	"fmt"
 	"log"
+
+	"github.com/kyokomi/redis-test-example/foo"
+	redis "gopkg.in/redis.v2"
 )
 
 var Service SampleService
 
 func init() {
-	fmt.Println("sample init")
+
+	f := foo.NewFoo()
+	fmt.Println("sample init", f.Name)
 	Service = SampleService{}
 }
 

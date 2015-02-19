@@ -1,10 +1,11 @@
 package main
 
 import (
-	redis "gopkg.in/redis.v2"
-	"log"
-	"github.com/kyokomi/redis-test-example/sample"
 	"fmt"
+	"log"
+
+	"github.com/kyokomi/redis-test-example/sample"
+	redis "gopkg.in/redis.v2"
 )
 
 func init() {

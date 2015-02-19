@@ -2,13 +2,14 @@ package sample
 
 import (
 	"testing"
+
 	redistest "github.com/soh335/go-test-redisserver"
 	redis "gopkg.in/redis.v2"
 )
 
 func TestSampleService(t *testing.T) {
 
-	server ,err := redistest.NewServer(true, nil)
+	server, err := redistest.NewServer(true, nil)
 	if err != nil {
 		t.Error(err)
 	}
