@@ -1,3 +1,15 @@
-test:
+dependencies:
   override:
-    - go test -v ./...
+    - go get -t -d -v github.com/kyokomi/redis-test-example
+    - go build -v:
+        pwd:
+          src/github.com/kyokomi/redis-test-example
+
+test:
+  pre:
+    - go get github.com/soh335/go-test-redisserver
+  override:
+    - go test -v ./...:
+        pwd:
+          src/github.com/kyokomi/redis-test-example
+
